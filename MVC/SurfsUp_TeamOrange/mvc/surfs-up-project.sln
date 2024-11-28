@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "surfs-up-project", "surfs-up-project\surfs-up-project.csproj", "{EEEA0409-6112-433F-B033-83AF3F84FFA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEEA0409-6112-433F-B033-83AF3F84FFA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEEA0409-6112-433F-B033-83AF3F84FFA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEEA0409-6112-433F-B033-83AF3F84FFA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEEA0409-6112-433F-B033-83AF3F84FFA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CDA6635-96E0-42F7-AA14-589B8F32972C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,539 @@
+/* Hele siden */
+html,
+body {
+    background-color: whitesmoke;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container {
+    background-color: #CC7723;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+    height: 100px;
+    /*background-color: rgba(226, 150, 69, 255);        SOLID FARVE*/
+    /*background-image: linear-gradient(rgba(226, 150, 69, 255), rgba(214,112,37,255))*/
+    /*Lys-orange til mørk orange*/
+    /*background-image: linear-gradient(45deg, #CC7723, #DE8C3A);*/
+    /*background-image: linear-gradient(rgba(81,227,255,255), rgba(12,126,197,255));    Lys blå til mørk blå (ocean)*/
+    /* HVILKE FARVER SKAL BRUGES (EVT SOLID?)*/
+}
+
+/* logo til top til venstre */
+#logo {
+    object-fit: contain;
+    height: 100%;
+}
+
+/* text til venstre for logo */
+#logo-text {
+    object-fit: contain;
+    height: 40px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.header-container {
+    display: flex;
+    /* Enables Flexbox layout */
+    justify-content: space-between;
+    /* Space between logo and menu */
+    align-items: center;
+    /* Aligns items vertically in the center */
+}
+
+.nav-top {
+    background-color: #CC7723;
+}
+
+h3 {
+    text-align: center;
+}
+
+/*   Container for menu  */
+#menu {
+    list-style-type: none;
+    /*Fjerner bullet points * */
+    display: flex;
+    text-align: center;
+    background-color: #CC7723;
+    height: 81px;
+    margin-right: 120px;
+}
+
+
+/*viser items i en række*/
+li {
+    font-weight: bold;
+    position: relative;
+    cursor: default;
+}
+
+    /*   Top-menu-items  */
+    li a {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        padding: 30px 40px; /* Øget padding */
+        font-size: 18px; /* Større tekst */
+    }
+
+    li:hover {
+        /* effekt for menu items */
+        background-color: orange;
+    }
+
+        li:hover .submenu {
+            /* viser dropdown når cursor "hover" 
+                over menu-item (som alle er pakket ind i "li")*/
+            display: block;
+        }
+
+.submenu {
+    /* regler for vores submenu (selve dropdown)   */
+    display: none;
+    /*   sørger for at den er skjult by default*/
+    position: absolute;
+    /*position ifht. "li" */
+    background-color: orange;
+    list-style-type: none;
+    /* fjerner bulletpoints*/
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    /*Sørger for at bredden matcher "parent" (altså MenuItem)*/
+    white-space: normal;
+    z-index: 1;
+}
+
+    .submenu a {
+        padding: 10px 16px;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+
+    .submenu li {
+        /*  Regler for selve ITEMS i "submenu"*/
+        display: block;
+        padding: 0;
+        margin: 0;
+        color: white;
+        text-align: left;
+    }
+
+        .submenu li:hover {
+            /* hover effekt for dropdown items */
+            background-color: black;
+        }
+
+#placeholder {
+    display: block;
+    font-size: large;
+    font-weight: bold;
+    margin: 50px;
+    text-align: center;
+}
+
+.produktoversigt {
+    text-align: center;
+    display: flex;
+    /* Brug af "flexbox" istedet for "in-line" block */
+    justify-content: center;
+    gap: 10px;
+}
+
+.produktbox {
+    width: 350px;
+    height: 250px;
+    background-size: contain;
+    /* skalere billedet så det ikke bliver cropped*/
+    background-position: center;
+    /* Centrerer billedet fra midten */
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    /* Lave en grænse så man kan se start og slut*/
+
+    display: flex;
+    /* afgører hvordan containerens elementer kan blive lagt ud - Række, kolonne osv */
+    flex-direction: column;
+    /* Elementer i kolonne. Header øverst, knap nederst */
+    justify-content: space-between;
+    /* Knappen ligger i bunden via "space-between" */
+    padding: 10px;
+    /* Så knappen ikke rør kanten */
+    box-sizing: border-box;
+    /*sørger for at indholdet er samme størrelse INKLUSIV padding*/
+}
+
+.booking {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+    .booking:hover {
+        transition: 0.3s;
+        background-color: rgb(171, 87, 56);
+    }
+
+#surf1 {
+    background-image: url('https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg');
+}
+
+#surf2 {
+    background-image: url('https://i.pinimg.com/736x/32/89/72/3289726342ef50ed542b27f5e44f351e.jpg');
+}
+
+#surf3 {
+    background-image: url('https://www.surf-zone.dk/app/webroot/uploads/gul-3mm-surf-hood-sort.jpg?timestamp=1492446092');
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+.logo-button {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Juster afstand mellem logo og sektioner */
+}
+
+    .logo-button img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+.container {
+    text-align: center;
+    /* Centrere sektionerne horisontalt */
+    margin-top: auto;
+}
+
+.section {
+    display: inline-block;
+    /* Gør sektionerne inline-blocks */
+    vertical-align: top;
+    /* Juster sektioner vertikalt */
+    width: 200px;
+    /* Angiv en bredde for hver sektion */
+    margin: 10px;
+    /* Juster afstand mellem sektioner */
+    text-align: left;
+    /* Juster tekst til venstre indenfor sektionen */
+}
+
+h2 {
+    margin-top: 20px;
+    /* Fjerner standard marginen øverst på overskrifterne */
+    margin-bottom: 10px;
+    /* Læg til afstand mellem overskriften og paragrafen */
+}
+
+p {
+    margin-top: 0;
+    /* Fjerner standard marginen ovenfor paragrafen */
+}
+
+#logo-bottom {
+    height: 100px;
+}
+
+#text-bottom {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------- FRONT PAGE ------------------------------------------------------------- */
+
+.hero-image {
+    /* The hero image */
+    background-image: url('/images/front-page.jpg');
+    /* Baggrundsbillede */
+    /* Positioning and centering */
+    position: relative;
+    /* Tillader absolut positionering af teksten */
+    background-size: cover;
+    /*  Billedet dækker hele containeren */
+    background-position: center;
+    /* Centrerer billedet */
+    background-repeat: no-repeat;
+    min-height: 600px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-image-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.hero-header-1 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    word-spacing: 8px;
+    letter-spacing: 2px;
+}
+
+.hero-header-2 {
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+}
+
+/* ----------------------------------------------------- SURFBOARD PAGES ---------------------------------------------------------- */
+
+#boardInformation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
+    #boardInformation table {
+        display: table;
+        border-collapse: collapse;
+        background-color: white;
+    }
+
+    #boardInformation td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    #boardInformation img {
+        object-fit: contain;
+        height: 50%;
+        max-height: 400px;
+    }
+
+/* ------------------------------------------------------- SURFBOARDS ------------------------------------------------------------ */
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+.boardoversigt {
+    text-align: center;
+    display: flex;
+    /* Brug af "flexbox" istedet for "in-line" block */
+    justify-content: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.boardbox {
+    width: 350px;
+    height: 450px;
+    background-color: white;
+    /* border: 1px solid #ccc; */
+    /* Lave en grænse så man kan se start og slut*/
+    display: flex;
+    /* afgører hvordan containerens elementer kan blive lagt ud - Række, kolonne osv */
+    flex-direction: column;
+    /* Elementer i kolonne. Header øverst, knap nederst */
+    justify-content: space-between;
+    /* Knappen ligger i bunden via "space-between" */
+    padding: 10px;
+    /*sørger for at indholdet er samme størrelse INKLUSIV padding*/
+}
+
+    .boardbox:hover {
+        -webkit-box-shadow: 0 0 10px lightgray;
+        box-shadow: 0 0 10px lightgray;
+    }
+
+        .boardbox:hover button {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    .boardbox a {
+        background-size: contain;
+        /* skalér billedet så det ikke bliver cropped*/
+        height: calc(100% - 36px);
+        width: 100%;
+        display: block;
+        color: black;
+    }
+
+    .boardbox h3 {
+        margin: 4%;
+    }
+
+    .boardbox img {
+        height: calc(100% - 80px);
+        width: 100%;
+        object-fit: contain;
+    }
+
+.add-to-cart-button {
+    width: 100%;
+    align-self: center;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.add-to-basket-button:hover {
+    background-color: rgb(171, 87, 56);
+}
+
+.wetoversigt {
+    text-align: center;
+    display: flex;
+    /* Brug af "flexbox" istedet for "in-line" block */
+    justify-content: left;
+    gap: 10px;
+}
+
+/* ------------------------------------------------------- VÅDDRAGTER ------------------------------------------------------------ */
+
+.wetbox {
+    width: 350px;
+    height: 250px;
+    background-size: contain;
+    /* skalere billedet så det ikke bliver cropped*/
+    background-position: center;
+    /* Centrerer billedet fra midten */
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    /* Lave en grænse så man kan se start og slut*/
+
+    display: flex;
+    /* afgører hvordan containerens elementer kan blive lagt ud - Række, kolonne osv */
+    flex-direction: column;
+    /* Elementer i kolonne. Header øverst, knap nederst */
+    justify-content: space-between;
+    /* Knappen ligger i bunden via "space-between" */
+    padding: 10px;
+    /* Så knappen ikke rør kanten */
+    box-sizing: border-box;
+    /*sørger for at indholdet er samme størrelse INKLUSIV padding*/
+}
+
+.wetbooking {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#wet1 {
+    background-image: url('https://www.oceandive.dk/5133-medium_default/blueseventy-fusion-v%C3%A5ddragt-mand.jpg');
+}
+
+/* ------------------------------------------------------- Shopping cart ------------------------------------------------------------ */
+
+#shopping-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    #shopping-cart a {
+        color: black;
+        border: 1px solid black;
+        background-color: lightgray;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 15px;
+    }
+
+/* ------------------------------------------------------- FOOTER ------------------------------------------------------------ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footerSections {
+    flex-direction: row;
+}
+
+/* ------------------------------------------------------- STYLING AF TIDSPUNKT OG DATO ------------------------------------------------------------ */
+
+/* Gør hele formularen større og centreret */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Label-styling: gør skriften større og tydelig */
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input-styling: gør input-felterne større og mere synlige */
+.form-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Styling af submit-knap */
+.form-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .form-button:hover {
+        background-color: #0056b3;
+    }

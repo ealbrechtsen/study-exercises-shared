@@ -1,0 +1,125 @@
+@model Board;
+
+<div id="boardInformation">
+    <h1>@Model.Name</h1>
+    <img src="@Model.ImagePath">
+    <h2>Nr. @Model.ProductId</h2>
+
+    <div class="content">
+        <!-- Tabellens container -->
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Pris</th>
+                    <th>Længde</th>
+                    <th>Bredde</th>
+                    <th>Tykkelse</th>
+                    <th>Volumen</th>
+                </tr>
+                <tr>
+                    <td>@Model.Type</td>
+                    <td>@Model.Price DKK</td>
+                    <td>@Model.Length"</td>
+                    <td>@Model.Width"</td>
+                    <td>@Model.Thickness"</td>
+                    <td>@Model.Volume"</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Knap til højre for tabellen -->
+        <div class="button-container">
+            <div class="quantity-control">
+                <button class="quantity-button" onclick="decreaseQuantity()">-</button>
+                <input type="text" id="quantity-input" value="1" readonly>
+                <button class="quantity-button" onclick="increaseQuantity()">+</button>
+            </div>
+            <button id="køb">Læg i kurv</button>
+        </div>
+    </div>
+
+    <style>
+        .content {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .table-container {
+            flex: 1;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+            width: 200px; /* Giv containeren tilstrækkelig bredde */
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-button {
+            background-color: #FFA500; /* Orange farve */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+        }
+
+            .quantity-button:hover {
+                background-color: #FF8C00; /* Mørkere orange ved hover */
+            }
+
+        #quantity-input {
+            width: 50px;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+            #køb {
+            background-color: green; /* Grøn farve */
+            color: black;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            /* Gør knappen mere synlig ved at sikre tilstrækkelig plads */
+            margin-top: 10px;
+        }
+
+            #køb:hover {
+                background-color: orange; /* Mørkere grøn ved hover */
+            }
+    </style>
+
+    <script>
+        function increaseQuantity() {
+            let input = document.getElementById("quantity-input");
+            let value = parseInt(input.value);
+            input.value = value + 1;
+        }
+
+        function decreaseQuantity() {
+            let input = document.getElementById("quantity-input");
+            let value = parseInt(input.value);
+            if (value > 1) { // Antallet kan ikke blive mindre end 1
+                input.value = value - 1;
+            }
+        }
+    </script>
+</div>

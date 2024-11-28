@@ -1,0 +1,70 @@
+﻿@model surfs_up_project.Models.OrderConfirmedVM
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="confirm-container">
+    <h2>Bekræft dine oplysninger</h2>
+
+    <p><strong>Fornavn:</strong> @Model.Customer.FirstName</p>
+    <p><strong>Efternavn:</strong> @Model.Customer.LastName</p>
+    <p><strong>Email:</strong> @Model.Customer.Email</p>
+    <p><strong>Telefonnummer:</strong> @Model.Customer.PhoneNumber</p>
+    <p><strong>Adresse:</strong> @Model.Customer.Address</p>
+    <p><strong>Postnummer:</strong> @Model.Customer.ZipCode</p>
+    <p><strong>By:</strong> @Model.Customer.City</p>
+
+    @foreach (var item in Model.Items)
+    {
+        <div id="boardInformation">
+            <table>
+                <tr>
+                    <th>Product-navn: </th>
+                    <th>Mængde:</th>
+                </tr>
+                <tr>
+                    <td>@item.Product.Name</td>
+                   
+                </tr>
+            </table>
+        </div>
+    }
+
+    <form asp-controller="Confirmed" asp-action="OrderConfirmed" method="post">
+        <button type="submit" class="confirm-button">Bekræft Ordre</button>
+    </form>
+</div>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .confirm-container {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        text-align: center;
+    }
+
+    .confirm-button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .confirm-button:hover {
+            background-color: #45a049;
+        }
+</style>
+
+

@@ -1,0 +1,45 @@
+﻿@model List<ShoppingCartItem>
+
+<div id="shopping-cart">
+    <h1>Indkøbskurv</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id:</th>
+                <th>Billede</th>
+                <th>Produkt-navn:</th>
+                <th style="border: none;"></th> <!-- Kolonne for sletning -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>
+                        <img src="@item.Product.ImagePath" alt="@item.Product.Name" style="height: 50px; width: auto;" />
+                    </td>
+                    <td>@item.Product.Name</td>
+                    <td>
+                        <form asp-action="RemoveFromCart" asp-controller="ShoppingCart" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit">Slet</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Booking dates: Pickup and Return -->
+    <div class="booking-dates">
+        <h3>Vælg dine booking datoer</h3>
+        <form asp-controller="Shipping" asp-action="Index" method="post">
+            <label for="pickUpDateTime">Afhentningsdato og -tidspunkt:</label>
+            <input type="datetime-local" id="pickUpDateTime" name="pickUpDateTime" required />
+            <label for="returnDateTime">Afleveringsdato og -tidspunkt:</label>
+            <input type="datetime-local" id="returnDateTime" name="returnDateTime" required />
+            <button type="submit">Videre</button>
+        </form>
+    </div>
+</div>

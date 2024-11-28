@@ -1,0 +1,288 @@
+body {
+    background-color: whitesmoke;
+}
+
+#logo
+
+/* logo til top til venstre */
+    {
+    object-fit: contain;
+    height: 100px;
+}
+
+#logo-text
+
+/* text til venstre for logo */
+    {
+    object-fit: contain;
+    height: 40px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+
+.img-container {
+    /*background-color: rgba(226, 150, 69, 255);        SOLID FARVE*/
+    /*background-image: linear-gradient(rgba(226, 150, 69, 255), rgba(214,112,37,255))*/
+    /*Lys-orange til mørk orange*/
+    background-color: #CC7723;
+    display: flex;
+    align-items: center;
+
+
+    /*background-image: linear-gradient(rgba(81,227,255,255), rgba(12,126,197,255));    Lys blå til mørk blå (ocean)*/
+    /* HVILKE FARVER SKAL BRUGES (EVT SOLID?)*/
+}
+
+.header-container {
+    display: flex;
+    /* Enables Flexbox layout */
+    justify-content: space-between;
+    /* Space between logo and menu */
+    align-items: center;
+    /* Aligns items vertically in the center */
+}
+
+.nav-top {
+    background-color: #CC7723;
+}
+
+#menu
+
+/*   Container for menu  */
+    {
+
+    list-style-type: none;
+    /*Fjerner bullet points * */
+    display: flex;
+    text-align: center;
+    background-color: #CC7723;
+    /*height: 100px;*/
+    height: 60px;
+    margin-right: 120px;
+    cursor: pointer;
+
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+
+li
+
+/*   Top-menu-items  */
+    {
+    display: inline-block;
+    /*viser items i en række*/
+    color: white;
+    /*text-farve*/
+    /*padding: 45px 30px;*/
+    padding: 20px 30px;
+    font-weight: bold;
+    position: relative;
+}
+
+.submenu
+
+/* regler for vores submenu (selve dropdown)   */
+    {
+    display: none;
+    /*   sørger for at den er skjult by default*/
+    position: absolute;
+    /*position ifht. "li" */
+    background-color: orange;
+    list-style-type: none;
+    /* fjerner bulletpoints*/
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    width: 100;
+    /*Sørger for at bredden matcher "parent" (altså MenuItem)*/
+    white-space: normal;
+
+}
+
+.submenu li
+
+/*  Regler for selve ITEMS i "submenu"*/
+    {
+    display: block;
+    padding: 10px 16px;
+    color: white;
+    text-align: left;
+
+    /* nedenstående sørger for at elementer ikke er større end
+    "parent"menu-item (altså "li") og bryder tekst-strengen hvis den er*/
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+.submenu li:hover
+
+/* hover effekt for dropdown items */
+    {
+    background-color: black;
+}
+
+li:hover .submenu
+
+/* viser dropdown når cursor "hover" 
+                over menu-item (som alle er pakket ind i "li")*/
+    {
+    display: block;
+}
+
+li:hover
+
+/* effekt for menu items */
+    {
+    background-color: orange;
+}
+
+.boardoversigt {
+    text-align: center;
+    display: flex;
+    /* Brug af "flexbox" istedet for "in-line" block */
+    justify-content: left;
+    gap: 10px;
+}
+
+.boardbox {
+    width: 350px;
+    height: 250px;
+    background-size: contain;
+    /* skalere billedet så det ikke bliver cropped*/
+    background-position: center;
+    /* Centrerer billedet fra midten */
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    /* Lave en grænse så man kan se start og slut*/
+
+    display: flex;
+    /* afgører hvordan containerens elementer kan blive lagt ud - Række, kolonne osv */
+    flex-direction: column;
+    /* Elementer i kolonne. Header øverst, knap nederst */
+    justify-content: space-between;
+    /* Knappen ligger i bunden via "space-between" */
+    padding: 10px;
+    /* Så knappen ikke rør kanten */
+    box-sizing: border-box;
+    /*sørger for at indholdet er samme størrelse INKLUSIV padding*/
+}
+
+.booking {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.booking:hover
+{
+    transition: 0.3s;
+    background-color: rgb(171, 87, 56);
+}
+
+#board1 {
+    background-image: url('https://www.primalsurf.co.nz/site/wp-content/uploads/2022/10/fade3-l.jpg');
+}
+
+#board2 {
+    background-image: url('https://i.pinimg.com/736x/32/89/72/3289726342ef50ed542b27f5e44f351e.jpg');
+}
+
+.wetoversigt {
+    text-align: center;
+    display: flex;
+    /* Brug af "flexbox" istedet for "in-line" block */
+    justify-content: left;
+    gap: 10px;
+}
+
+.wetbox {
+    width: 350px;
+    height: 250px;
+    background-size: contain;
+    /* skalere billedet så det ikke bliver cropped*/
+    background-position: center;
+    /* Centrerer billedet fra midten */
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+    /* Lave en grænse så man kan se start og slut*/
+
+    display: flex;
+    /* afgører hvordan containerens elementer kan blive lagt ud - Række, kolonne osv */
+    flex-direction: column;
+    /* Elementer i kolonne. Header øverst, knap nederst */
+    justify-content: space-between;
+    /* Knappen ligger i bunden via "space-between" */
+    padding: 10px;
+    /* Så knappen ikke rør kanten */
+    box-sizing: border-box;
+    /*sørger for at indholdet er samme størrelse INKLUSIV padding*/
+}
+
+.wetbooking {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#wet1 {
+    background-image: url('https://www.oceandive.dk/5133-medium_default/blueseventy-fusion-v%C3%A5ddragt-mand.jpg');
+}
+
+
+
+
+.section {
+    display: inline-block;
+    /* Gør sektionerne inline-blocks */
+    vertical-align: top;
+    /* Juster sektioner vertikalt */
+    width: 200px;
+    /* Angiv en bredde for hver sektion */
+    margin: 10px;
+    /* Juster afstand mellem sektioner */
+    text-align: left;
+    /* Juster tekst til venstre indenfor sektionen */
+}
+
+.logo-button {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Juster afstand mellem logo og sektioner */
+}
+
+.logo-button img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.container {
+    text-align: center;
+    /* Centrere sektionerne horisontalt */
+}
+
+#logo-bottom {
+    width: 150px;
+    height: 150px;
+
+
+}
+
+#text-bottom {
+    width: 200px;
+
+}

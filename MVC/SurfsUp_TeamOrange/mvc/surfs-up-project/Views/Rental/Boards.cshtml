@@ -1,0 +1,27 @@
+@model List<Board>;
+
+<h1>
+    Oversigt over boards
+</h1>
+
+<!-- BOARD Container -->
+<div class="boardoversigt">
+
+    @foreach (var board in Model)
+    {
+        int ProductId = @board.ProductId;
+        <div class="boardbox" id="board-@board.ProductId">
+            <a asp-controller="rental" asp-action="board" asp-route-id="@board.ProductId">
+                <h3>@board.Name</h3>
+                <img src="@board.ImagePath">
+                <span>@board.Price kr.</span>
+            </a>
+
+            <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
+                <input type="hidden" asp-for="@ProductId" />
+                <button type="submit" class="add-to-cart-button">Læg i kurv</button>
+            </form>
+        </div>
+    }
+
+</div>

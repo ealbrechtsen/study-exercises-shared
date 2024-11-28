@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title> <!-- Dynamic title for each view -->
+    <title>@ViewData.["Title"]</title>
+    <!-- Link to CSS styles -->
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+
+<body>
+    <!---------- HEADER ----------->
+    <nav class="nav-top">
+        <div class="header-container">
+            <div class="img-container">
+                <img id="logo" src="~/images/image-logo.png" alt="Logo">
+                <img id="logo-text" src="~/images/image-logo-text.png" alt="Logo Text">
+            </div>
+            <ul id="menu" class="dropdown">
+                <li><a asp-controller="home" asp-action="index">Hjem</a></li>
+                <li>
+                    <a>Udlejning</a>
+                    <ul class="submenu">
+                        <li><a asp-controller="rental" asp-action="boards">Boards</a></li>
+                        <li><a asp-controller="rental" asp-action="wetsuit">Våddragter</a></li>
+                        <li><a asp-controller="rental" asp-action="equipment">Udstyr</a></li>
+                        <li><a>Undervisning - IKKE NØDVENDIG ENDNU</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>Om os</a>
+                    <ul class="submenu">
+                        <li><a>Hvem er vi?</a></li>
+                        <li><a>FAQ</a></li>
+                    </ul>
+                </li>
+                <li><a>Kontakt</a></li>
+                <li><a asp-controller="shoppingcart" asp-action="index">Kurv</a></li>  
+            </ul>
+            <l><partial name="_LoginPartial"/></l>
+        </div>
+    </nav>
+
+    <!---------- CONTENT ----------->
+    <div class="container">
+        @RenderBody() <!-- Her bliver view-indholdet indsat -->
+    </div>
+
+    <!---------- FOOTER ----------->
+    <footer>
+        <div class="bottom">
+            <img id="logo-bottom" src="~/images/image-logo.png" alt="logo-bottom">
+            <img id="text-bottom" src="~/images/image-logo-text.png" alt="text-bottom">
+        </div>
+
+        <div id="footerSections">
+        <div class="section">
+            <h2>Link</h2>
+            <p>
+                Forside <br>
+                Om Surf’s Up <br>
+                Udlejning <br>
+                Køb og salg <br>
+                Brugtmarked <br>
+                Nytmarked <br>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Kundeservice</h2>
+            <p>
+                Kontakt <br>
+                Privatlivspolitik <br>
+                Skadeanmeldelse <br>
+                Vilkår og betingelser <br>
+                Cookies <br>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Om os</h2>
+            <p>
+                Surfervej 3, 5000 Odense C <br>
+                Ring til os: 67495201 <br>
+                Email: surfsup@gmail.com<br>
+                Mandag-Torsdag: 07-18<br>
+                Fredag: 07-16 <br>
+                Lørdag: 08-18 <br>
+                Søndag: Lukket<br>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
