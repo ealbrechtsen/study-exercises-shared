@@ -1,0 +1,12 @@
+C:\Users\Magnus\Desktop\Visual Studio 2022\Uge48_CleanArch\CleanArchBlazorExample.Domain\bin\Debug\net8.0\CleanArchBlazorExample.Domain.deps.json
+C:\Users\Magnus\Desktop\Visual Studio 2022\Uge48_CleanArch\CleanArchBlazorExample.Domain\bin\Debug\net8.0\CleanArchBlazorExample.Domain.dll
+C:\Users\Magnus\Desktop\Visual Studio 2022\Uge48_CleanArch\CleanArchBlazorExample.Domain\bin\Debug\net8.0\CleanArchBlazorExample.Domain.pdb
+C:\Users\Magnus\Desktop\Visual Studio 2022\Uge48_CleanArch\CleanArchBlazorExample.Domain\obj\Debug\net8.0\CleanArchBlazorExample.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Magnus\Desktop\Visual Studio 2022\Uge48_CleanArch\CleanArchBlazorExample.Domain\obj\Debug\net8.0\CleanArchBlazorExample.Domain.AssemblyInfoInputs.cache
+C:\Users\Magnus\Desktop\Visual Studio 2022\Uge48_CleanArch\CleanArchBlazorExample.Domain\obj\Debug\net8.0\CleanArchBlazorExample.Domain.AssemblyInfo.cs
+C:\Users\Magnus\Desktop\Visual Studio 2022\Uge48_CleanArch\CleanArchBlazorExample.Domain\obj\Debug\net8.0\CleanArchBlazorExample.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Magnus\Desktop\Visual Studio 2022\Uge48_CleanArch\CleanArchBlazorExample.Domain\obj\Debug\net8.0\CleanArchBlazorExample.Domain.sourcelink.json
+C:\Users\Magnus\Desktop\Visual Studio 2022\Uge48_CleanArch\CleanArchBlazorExample.Domain\obj\Debug\net8.0\CleanArchBlazorExample.Domain.dll
+C:\Users\Magnus\Desktop\Visual Studio 2022\Uge48_CleanArch\CleanArchBlazorExample.Domain\obj\Debug\net8.0\refint\CleanArchBlazorExample.Domain.dll
+C:\Users\Magnus\Desktop\Visual Studio 2022\Uge48_CleanArch\CleanArchBlazorExample.Domain\obj\Debug\net8.0\CleanArchBlazorExample.Domain.pdb
+C:\Users\Magnus\Desktop\Visual Studio 2022\Uge48_CleanArch\CleanArchBlazorExample.Domain\obj\Debug\net8.0\ref\CleanArchBlazorExample.Domain.dll
