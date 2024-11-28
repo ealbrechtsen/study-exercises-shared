@@ -8,19 +8,26 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Magnus\\.nuget\\packages\\": {}
+    "C:\\Users\\emilm\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Magnus\\Desktop\\Visual Studio 2022\\Uge48_CleanArch\\CleanArchBlazorExample.Domain\\CleanArchBlazorExample.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\emilm\\source\\repos\\2. studieår\\study-exercises-shared\\CleanArchBlazorExample.Domain\\CleanArchBlazorExample.Domain.csproj",
       "projectName": "CleanArchBlazorExample.Domain",
-      "projectPath": "C:\\Users\\Magnus\\Desktop\\Visual Studio 2022\\Uge48_CleanArch\\CleanArchBlazorExample.Domain\\CleanArchBlazorExample.Domain.csproj",
-      "packagesPath": "C:\\Users\\Magnus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Magnus\\Desktop\\Visual Studio 2022\\Uge48_CleanArch\\CleanArchBlazorExample.Domain\\obj\\",
+      "projectPath": "C:\\Users\\emilm\\source\\repos\\2. studieår\\study-exercises-shared\\CleanArchBlazorExample.Domain\\CleanArchBlazorExample.Domain.csproj",
+      "packagesPath": "C:\\Users\\emilm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\emilm\\source\\repos\\2. studieår\\study-exercises-shared\\CleanArchBlazorExample.Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Magnus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\emilm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -44,8 +51,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -66,7 +74,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

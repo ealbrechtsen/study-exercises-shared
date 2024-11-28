@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "v6OEr2PokxY=",
+  "dgSpecHash": "HQ8tJ3NKigY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Magnus\\Desktop\\Visual Studio 2022\\Uge48_CleanArch\\CleanArchBlazorExample.Infrastructure\\CleanArchBlazorExample.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\emilm\\source\\repos\\2. studieår\\study-exercises-shared\\CleanArchBlazorExample.Infrastructure\\CleanArchBlazorExample.Infrastructure.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Magnus\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
+    "C:\\Users\\emilm\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
   ],
   "logs": []
 }

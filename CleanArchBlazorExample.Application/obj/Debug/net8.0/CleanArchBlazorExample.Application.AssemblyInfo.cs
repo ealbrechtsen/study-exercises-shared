@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CleanArchBlazorExample.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ff64e79ad5f40437dc1c8f2c501aa067e727309")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af15c43508fa34babd8b08b3e920672356319d47")]
 [assembly: System.Reflection.AssemblyProductAttribute("CleanArchBlazorExample.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CleanArchBlazorExample.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
